@@ -1,0 +1,297 @@
+:root{
+    font-size: 18px;
+    --white10:#3A3539;
+    --white20:#A5A3A5;
+    --white30:white;
+    direction: ltr;
+    /* direction: rtl; */
+    writing-mode: horizontal-tb;
+    text-orientation:mixed ;
+}
+
+body{
+    font-size: 16px;
+    color: var(--white30);
+    font-family: 'Nunito', sans-serif;
+    background: #251F24;
+    margin: 0;
+}
+
+a{
+    color: var(--white30);
+}
+
+p{
+    color:var(--white20);
+}
+
+.hero{
+    /* background-image: linear-gradient(to top, rgba(255, 255, 255, .2), transparent), url(../images/patron.webp); */
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    block-size: 50px;
+}
+
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    /* se aplica margin collapsing */
+    /* max-width: 100%; */ /*equivale a :*/
+    max-inline-size: 100%;
+}
+
+.section-content{
+    counter-reset: titlelist;
+}
+
+.section-content h3{
+    counter-increment: titlelist;
+}
+
+.section-content h3::before{
+    /* content:'-'; */
+    /* content: counter(titlelist, upper-roman); */
+    /* content: counter(titlelist, decimal) "-"; */
+    content: counter(titlelist, decimal) ". ";
+    inline-size: 32px;
+    block-size: 4px;
+}
+
+/* .section-content h3::after{
+    content:'';
+    --
+    width: 32px;
+    inline-size: 32px;
+    --
+    Valores logicos
+    --
+    height: 4px;
+    block-size: 4px;
+    --
+    background: var(--white30);
+    display: inline-block;     
+} */
+
+header{
+    /* --white10:red; */
+    font-size: 14px;
+    color: white;
+    margin-block-start: 20px   ;
+    /* top: ; */
+    /* bottom: ; */
+    /* inset-block-end: ; */
+    /* left: ; */
+    /* right: ; */
+    /* inset-inline-end: ; */
+}
+
+.header{
+    /* position: sticky;
+    inset-block-start: 0; */
+    /* modal */
+    /* background: red; */
+    /* position: absolute; */
+    /* position: fixed; */
+    /* block-size:500px;
+    inline-size:500px; */
+    /* desplegar todo */
+    /* inset: 50px; */
+}
+
+.header-content{
+    padding-inline: 20px;
+    /* position: relative;
+    inset-block-start: 20px; */
+}
+
+header a{
+    color: var(--white20);
+    text-decoration: none;
+}
+
+header li{
+    color: var(--white20);
+    margin-block-end: 16px;
+}
+
+header a:hover{
+    color: var(--white30);
+}
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+.main hr{
+    display: none;
+}
+
+hr{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
+}
+
+h1{
+    font-size: 40px;
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+    /* text-align: left;
+    text-align: start;
+    text-align: right;
+    text-align: end; */
+}
+
+h2{
+    font-size: 32px;
+    margin-block: 40px;
+} 
+
+h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-block: 16px;
+}
+
+pre{
+    background: var(--white10);
+    padding: 40px;
+    overflow: auto;
+    border-radius: 8px;
+    /* Valores Logicos
+    border-inline-start: orange 10px solid; 
+    border-inline-end: orange 10px solid; 
+    border-block: 10px green solid;
+    border-block-start: orange 10px solid; 
+    border-block-end: orange 10px solid; 
+    border-block-start-color: red;*/
+    border:10px solid #5551FF;
+    box-shadow: -10px 10px 0 0 #ABAAF6;
+    margin-block-end: 40px;
+    /* border-start-start-radius: 40px; */
+}
+
+blockquote{
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white10);
+    border-radius: 8px;
+    /* padding: 24px; */
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+blockquote p{
+    color: var(--white30);
+}
+
+.main {
+
+}
+
+.wrapper{
+    max-inline-size: 902px; /* equivalente de width */
+    /* block-size: 100px;*/ /* equivalente a la altura */
+    /* overflow: hidden;
+    overflow: auto; */
+    /* max-block-size: 100px; */
+    margin: auto;
+}
+
+.main-content{
+    padding-inline: 16px;
+}
+
+.slider{
+    /* outline: 1px solid orangered; */
+}
+
+.slider-container{
+    /* block-size: 100px; */
+    /* outline: 1px solid greenyellow; */
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.video{
+    /* outline: 1px solid blueviolet; */
+    margin: 0;
+    /* display: inline;
+    Los elementos inline no pueden tener un ancho ni un alto */
+    inline-size: 100%;
+    display: inline-block;
+    block-size: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet{
+    display: inline-block;
+    inline-size: 20px;
+    block-size: 20px;
+    background: white;
+    border-radius: 50%;
+
+}
+
+.form input{
+    inline-size:100%;
+    box-sizing: border-box;
+    background: #251F24;
+    border-radius: 8px;
+    padding-inline:16px;
+    padding-block:12px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+    margin-block-start: 24px;
+}
+
+.form input[type="submit"]{
+    background: #157EFB;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder{
+    color: var(--white20);
+}
+
+@media screen and (min-width:1366px) {
+
+.hero{
+    block-size: 350px;
+}
+    
+header{
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -188px;
+    inline-size: 208px;
+}
+
+.header{
+    position: sticky;
+    inset-block-start: 0;
+}
+
+.header-content{
+    position: relative;
+    inset-block-start: 20px;
+    padding-inline: 0;
+}
+
+h1{
+    font-size: 60px;
+    margin-block-start: 64px;
+}
+}
