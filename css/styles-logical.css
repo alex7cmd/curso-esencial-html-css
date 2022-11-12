@@ -266,6 +266,11 @@ blockquote p{
     color: var(--white20);
 }
 
+summary{
+    cursor: pointer;
+    outline: 0;
+}
+
 @media screen and (min-width:1366px) {
 
 .hero{
@@ -295,3 +300,4 @@ h1{
     margin-block-start: 64px;
 }
 }
+
